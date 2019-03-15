@@ -1,0 +1,449 @@
+:root {
+	--nav-height: 70px; /* Set in global.js */
+
+	/* Theme colors */
+	--living-coral: #FA7268;
+	--middle-black: #222;
+	--middle-gray: #898989;
+	--light-gray: #dedede;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,
+em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas,
+details, embed, figure, figcaption, footer, header, hgroup, menu, nav,
+output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup,
+menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*---------------------------------------------------------------------------*/
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.main {
+}
+
+h1, h2, h3, p {
+	margin: 5px 0 5px 0;
+}
+
+a, a * {
+	color: inherit;
+}
+
+a:hover {
+	color: inherit;
+}
+
+.my-auto {
+	margin: auto;
+}
+
+.element-line {
+	margin-top: 40px;
+}
+
+.lead {
+	margin-top: 40px;
+}
+
+body {
+	background-color: #ffffff;
+	font-family: overpass;
+	font-size: 18px;
+	line-height: 25px;
+	font-weight: 300;
+	color: var(--middle-gray);
+	position: relative;
+	min-width: 100%;
+	min-height: 100%;
+	box-sizing: border-box;
+}
+
+#about, #mobile-app, #clients, #team, #contact {
+	padding-top: 80px;
+}
+
+.paroller {
+	margin-top: 100px;
+}
+.section-content {
+	background-color: white;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.section-title{
+	text-transform: uppercase;
+}
+
+.section-header{
+	color: var(--middle-black);
+}
+
+.section-title h1{
+	color: black;
+	font-size: 50px;
+	line-height: 55px;
+	font-weight: 400;
+	border-bottom: 1px solid var(--light-gray);
+}
+
+.section-title span{
+	color: var(--middle-gray);
+}
+
+.section-content h1{
+	color: var(--middle-black);
+	font-size: 28px;
+}
+
+@media only screen and (min-width: 768px) {
+	.main .line {
+		background-color: var(--light-gray);
+		height: 1px;
+		width: 120px;
+		display: inline-block;
+		margin: 5px 15px;
+	}
+
+	.section-title h1{
+		border-bottom: none;
+	}
+
+	h1, h2, h3, p {
+		margin: 20px 0 10px 0;
+	}
+	.lead {
+		margin-top: 50px;
+	}
+	.element-line {
+		margin-top: 60px;
+	}
+}
+
+#mobile-app .section-content .download-badge {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+#mobile-app .section-content .download-badge img {
+	max-width: 300px;
+	width: 100%;
+}
+
+/* ------------------------- SLIDER -----------------------------*/
+@media only screen and (min-width: 768px) {
+	.slide-in {
+		/* Safari, Chrome and Opera > 12.1 */
+		-webkit-animation: fadein 1s forwards, slide-in 1s forwards;
+		animation: fadein 1s forwards, slide-in 1s forwards;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.slider {
+		opacity: inherit !important;
+		transform: none !important;
+		-webkit-transform: none !important;
+	}
+}
+
+@keyframes fadein {
+	from { opacity: 0; }
+	to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+	from { opacity: 0; }
+	to   { opacity: 1; }
+}
+
+@keyframes slide-in {
+	100% { transform: translateX(0%); }
+	100% { transform: translateY(0%); }
+}
+
+@-webkit-keyframes slide-in {
+	100% { -webkit-transform: translateX(0%); }
+	100% { transform: translateY(0%); }
+}
+
+/* ------------------------- HEXAGON ICON -----------------------------*/
+.icon-hexagon {
+	color: var(--living-coral);
+	position: relative;
+	display: inline-block;
+	width: 40px;
+	height: 23.09px;
+	background-color: white;
+	font-size: 23px;
+	padding: 11.55px 11.55px;
+}
+.icon-hexagon span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	text-align: center;
+}
+.icon-hexagon::after, .icon-hexagon::before {
+	content: "";
+	position: absolute;
+	width: 0;
+	left: 0;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+}
+.icon-hexagon::before {
+	bottom: 100%;
+	border-bottom: 11.55px solid white;
+}
+.icon-hexagon::after {
+	top: 100%;
+	width: 0;
+	border-top: 11.55px solid white;
+}
+a.icon-hexagon:hover {
+	color: var(--middle-black);
+}
+
+/* ------------------------- HOME ITEMS ---------------------------------*/
+
+.wrapper-home {
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+}
+
+.wrapper-home video#bgvid {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 100%;
+	width: 177.77777778vh; /* 100 * 16 / 9 */
+	min-width: 100%;
+	min-height: 56.25vw; /* 100 * 9 / 16 */
+	z-index: -100;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+}
+
+@media only screen and (max-width: 768px) {
+	.wrapper-home div#bgimage {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		z-index: -100;
+
+		background-image: url("../media/images/intro-static-bg.jpg");
+
+		/* Center and scale the image nicely */
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.wrapper-home video#bgvid {
+		display: none;
+	}
+}
+
+.home-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	display: table;
+	z-index: -5;
+}
+
+.home-image {
+	text-align: center;
+	vertical-align: middle;
+	display: table-cell;
+}
+
+.home-image img {
+	position: relative;
+	height: auto;
+	vertical-align: middle;
+	max-width: 100%;
+	max-height: 400px;
+	margin: 20px 0px 20px 0px;
+}
+
+/* ------------------------- TOP BUTTON ---------------------------------*/
+#back-top {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	z-index: 100;
+	background-color: var(--living-coral);
+	color: white;
+	border-radius: 50%;
+	transition: all 0.3s ease-out 0s;
+}
+
+/* ------------------------- INTRO FADE-OUT -----------------------------*/
+body {
+	opacity: 1;
+	transition: 0.5s opacity;
+}
+body.fade-out {
+	opacity: 0;
+	transition: none;
+}
+
+/* ------------------------- TOP-NAV DISPLAY -----------------------------*/
+.navbar-custom {
+	padding : 0;
+	z-index: 1020;
+	background-color: var(--living-coral);
+}
+
+.navbar-custom .navbar-brand {
+	padding: 0;
+}
+
+.navbar-custom .navbar-brand img{
+	height: var(--nav-height);
+	padding: 10px;
+}
+
+.navbar-custom .menu-nav a {
+	transition: all 0.4s ease-out 0s;
+}
+
+.navbar-custom .navbar-collapse .navbar-nav .nav-item .nav-link {
+	display: block;
+	color: white;
+	font-size: 14px;
+	font-weight: 500;
+	padding: 0;
+}
+
+.navbar-custom .navbar-collapse .menu-nav .nav-item .nav-link {
+	text-transform: uppercase;
+	height: var(--nav-height);
+	line-height: var(--nav-height);
+	padding: 0 8px;
+}
+
+@media only screen and (min-width: 768px) {
+	.navbar-custom .navbar-collapse .menu-nav .nav-item .nav-link {
+		padding: 0 25px;
+	}
+}
+
+.navbar-custom .navbar-collapse .lang-nav .nav-item{
+	padding: 5px;
+}
+
+.navbar-custom .navbar-collapse .navbar-nav .nav-item:hover .nav-link {
+	color: var(--middle-black);
+	background-color: inherit;
+}
+
+.navbar-custom .navbar-collapse .navbar-nav .nav-item .nav-link.active {
+	color: black;
+	background-color: white;
+}
+
+.navbar-custom .navbar-collapse .navbar-nav .nav-item .nav-link:focus {
+	color: var(--middle-black);
+}
+
+.navbar-custom .navbar-toggler{
+	height: var(--nav-height);
+	border: none;
+	padding: 0 15px 2px 15px;
+	margin: 0;
+}
+
+.navbar-custom .navbar-toggler .fa-bars {
+	color: white;
+	padding: 3px;
+}
+
+nav .icon-hexagon::after, nav .icon-hexagon::before {
+	border-left: 12.5px solid transparent;
+	border-right: 12.5px solid transparent;
+}
+nav .icon-hexagon {
+	width: 25px;
+	height: 14.43px;
+	font-size: 14px;
+}
+nav .icon-hexagon::before {
+	border-bottom: 7.22px solid white;
+}
+nav .icon-hexagon::after {
+	border-top: 7.22px solid white;
+}
+
+/* ------------------------- FOOTER -----------------------------*/
+
+footer {
+	color: white;
+	background-color: var(--living-coral);
+	height:auto;
+	margin-top: 50px;
+	font-size: 15px;
+	line-height: 16px;
+	padding: 10px 0 5px 0;
+}
+
+footer .element-line {
+	margin-top: 15px;
+}
