@@ -1,5 +1,7 @@
 @extends('layout')
 
+@section('pageTitle', 'Home')
+
 @section('header')
 
 <div class="wrapper-home">
@@ -28,8 +30,19 @@
     <div class="container section-content">
       <div class="row">
         <div class="col-md-6 order-md-2 text-md-right my-auto">
-          <div class="element-line">
-            <img class="img-fluid" src="{{ asset('/media/logo/logo_color_alpha.png') }}" style="max-height: 300px">
+          <div class="element-line position-relative">
+              <img class="img-fluid position-absolute paroller-element" src="{{ asset('/media/illustrations/AR_foreground.svg') }}">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink= "http://www.w3.org/1999/xlink" style="position: absolute" width="100%" height="100%">
+                <defs>
+                  <mask id="mask">
+                    <image xlink:href="{{ asset('/media/illustrations/AR_mask.svg') }}" width="100%" height="100%">
+                  </mask>
+                </defs>
+                <g mask="url(#mask)">
+                  <image xmlns:xlink= "http://www.w3.org/1999/xlink" xlink:href="{{ asset('/media/illustrations/AR_augmentation.svg') }}" width="100%" height="100%" />
+                </g>
+              </svg>
+              <img class="img-fluid" src="{{ asset('/media/illustrations/AR_background.svg') }}" style="max-height: 4 00px">
           </div>
         </div>
         <div class="col-md-6 text-md-left my-auto">
@@ -44,8 +57,9 @@
     <div class="container section-content">
       <div class="row">
         <div class="col-md-6 text-md-left my-auto">
-          <div class="element-line">
-            <img class="img-fluid" src="{{ asset('/media/logo/logo_color_alpha.png') }}" style="max-height: 300px">
+          <div class="element-line position-relative">
+            <img class="img-fluid position-absolute paroller-element" src="{{ asset('/media/illustrations/VR_foreground.svg') }}">
+            <img class="img-fluid" src="{{ asset('/media/illustrations/VR_background.svg') }}" style="max-height: 300px">
           </div>
         </div>
         <div class="col-md-6 text-md-right my-auto">
@@ -121,7 +135,7 @@
       </div>
     </section>
 
-    <div class="container-fluid paroller" style="background: url(\"{{ asset('/media/images/3dm_4.jpg') }}\") no-repeat center; background-size: cover; height: 400px" data-paroller-factor="0.2"></div>
+    <div class="container-fluid paroller" style="background: url({{ URL::asset('/media/images/3dm_4.png') }}) no-repeat center; background-size: cover; height: 400px" data-paroller-factor="0.2"></div>
 
     <section id="mobile-app" class="text-center">
       <div class="container section-header">
@@ -185,7 +199,7 @@
       </div>
     </section>
 
-    <div class="container-fluid paroller" style="background: url(\"{{ asset('/media/images/3dm_3.jpg') }}\") no-repeat center; background-size: cover; height: 400px" data-paroller-factor="0.5"></div>
+    <div class="container-fluid paroller" style="background: url({{ URL::asset('/media/images/3dm_3.jpg') }}) no-repeat center; background-size: cover; height: 400px" data-paroller-factor="0.5"></div>
 
     <section id="team">
       <div class="container section-header text-center">

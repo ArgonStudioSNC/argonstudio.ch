@@ -2,8 +2,14 @@ var navHeight = 60;
 document.documentElement.style.setProperty('--nav-height', navHeight + 'px');
 
 $(document).ready(function(){
-  responsiveHomeScreen();
+  $(".wrapper-home").css("height", getViewportHeight());
   $('.paroller').paroller(); // paroller init
+  $('.paroller-element').paroller({
+    factor: -0.1,
+    type: 'foreground',
+    direction: 'horizontal',
+    transition: 'transform 0.5s ease'
+  });
 
   $('#navigation').sticky({topSpacing:0});
 
@@ -23,40 +29,34 @@ $(document).ready(function(){
 
   $.force_appear();
 
-  window.onresize = function(){
-    responsiveHomeScreen();
-    updateParoller();
-  }
-
-  window.onscroll = function() {
-    backTopButtonEnable();
-    alwaysEnableFirstNavItem();
-  }
-
   $('body').removeClass('fade-out');
-});
 
-function getViewportHeight(){
-  return window.innerHeight
-  || document.documentElement.clientHeight
-  || document.body.clientHeight;
-}
-
-function responsiveHomeScreen() {
-  $(".wrapper-home").css("height", getViewportHeight());
-}
-
-function alwaysEnableFirstNavItem() {
-  if ($(".navbar-custom .navbar-collapse .menu-nav .nav-item .nav-link.active")[0]){
-  } else {
-    document.getElementById("default-link").classList.add("active");
+  function getViewportHeight(){
+    return window.innerHeight
+    || document.documentElement.clientHeight
+    || document.body.clientHeight;
   }
-}
 
-function updateParoller() {
-  //todo
-  $('.paroller').paroller();
-}
+  window.addEventListener('resize', function() {
+    // responsize home screen
+    $(".wrapper-home").css("height", getViewportHeight());
+
+    //todo update paroller
+    $('.paroller').paroller();
+  });
+
+  window.addEventListener('scroll', function(e) {
+    // back to top element
+    if ($(".navbar-custom .navbar-collapse .menu-nav .nav-item .nav-link.active")[0]){
+    } else {
+      document.getElementById("default-link").classList.add("active");
+    }
+
+    // parallax mask for VR illustration
+    var clip = document.querySelector('#vr-clip-rect');
+    console.log(clip.getAttribute('x'));
+  });
+});
 
 window.addEventListener("load", function(){
   window.cookieconsent.initialise({
@@ -71,4 +71,5 @@ window.addEventListener("load", function(){
         "border": "#ffffff"
       }
     }
-  })});
+  })
+});
