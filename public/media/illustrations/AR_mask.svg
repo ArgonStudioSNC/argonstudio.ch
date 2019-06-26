@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 23.0.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1252.08 1149" style="enable-background:new 0 0 1252.08 1149;" xml:space="preserve">
+	 viewBox="0 0 1252.08 1149" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#FFFFFF;}
+	.st0{fill:#ffffff;}
 </style>
-<g id="Layer_2">
-	<rect width="1252" height="1149"/>
-</g>
 <g id="mask">
-	<g id="XMLID_1_">
-		<g>
-			<rect x="538" y="98" class="st0" width="413" height="635"/>
-		</g>
-		<g>
-		</g>
-	</g>
+			<rect  class="st0" x="538" y="98" width="413" height="635"/>
 </g>
 </svg>

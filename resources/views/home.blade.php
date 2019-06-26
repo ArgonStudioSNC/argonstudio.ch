@@ -31,18 +31,20 @@
       <div class="row">
         <div class="col-md-6 order-md-2 text-md-right my-auto">
           <div class="element-line position-relative">
-              <img class="img-fluid position-absolute paroller-element" src="{{ asset('/media/illustrations/AR_foreground.svg') }}">
-              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink= "http://www.w3.org/1999/xlink" style="position: absolute" width="100%" height="100%">
+              <img class="img-fluid position-absolute" src="{{ asset('/media/illustrations/AR_foreground.svg') }}">
+              <svg class="position-absolute" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1252.08 1149" xml:space="preserve">
                 <defs>
-                  <mask id="mask">
-                    <image xlink:href="{{ asset('/media/illustrations/AR_mask.svg') }}" width="100%" height="100%">
-                  </mask>
+                  <g>
+                  <clipPath id="clip">
+                    <rect fill="#ffffff" x="538" y="98" width="413" height="635" transition="x 0.5s ease"/>
+                  </clipPath>
+                  </g>
                 </defs>
-                <g mask="url(#mask)">
-                  <image xmlns:xlink= "http://www.w3.org/1999/xlink" xlink:href="{{ asset('/media/illustrations/AR_augmentation.svg') }}" width="100%" height="100%" />
+                <g clip-path="url(#clip)" >
+                  <image xmlns:xlink= "http://www.w3.org/1999/xlink" xlink:href="{{ asset('/media/illustrations/AR_augmentation.svg') }}" height=100% width=100%>
                 </g>
               </svg>
-              <img class="img-fluid" src="{{ asset('/media/illustrations/AR_background.svg') }}" style="max-height: 4 00px">
+              <img class="img-fluid" src="{{ asset('/media/illustrations/AR_background.svg') }}" style="max-height: 400px">
           </div>
         </div>
         <div class="col-md-6 text-md-left my-auto">
@@ -58,7 +60,7 @@
       <div class="row">
         <div class="col-md-6 text-md-left my-auto">
           <div class="element-line position-relative">
-            <img class="img-fluid position-absolute paroller-element" src="{{ asset('/media/illustrations/VR_foreground.svg') }}">
+            <img class="img-fluid position-absolute" src="{{ asset('/media/illustrations/VR_foreground.svg') }}">
             <img class="img-fluid" src="{{ asset('/media/illustrations/VR_background.svg') }}" style="max-height: 300px">
           </div>
         </div>
@@ -75,7 +77,7 @@
       <div class="row">
         <div class="col-md-6 order-md-2 text-md-right my-auto">
           <div class="element-line">
-            <img class="img-fluid" src="{{ asset('/media/logo/logo_color_alpha.png') }}" style="max-height: 300px">
+            <img class="img-fluid" src="{{ asset('/media/illustrations/urbanisme_background.svg') }}" style="max-height: 300px">
           </div>
         </div>
         <div class="col-md-6 text-md-left my-auto">
@@ -91,7 +93,7 @@
       <div class="row">
         <div class="col-md-6 text-md-left my-auto">
           <div class="element-line">
-            <img class="img-fluid" src="{{ asset('/media/logo/logo_color_alpha.png') }}" style="max-height: 300px">
+            <img class="img-fluid" src="{{ asset('/media/illustrations/art_background.svg') }}" style="max-height: 300px">
           </div>
         </div>
         <div class="col-md-6 text-md-right my-auto">
@@ -100,42 +102,10 @@
             <p class='slider' style="opacity: 0;transform: translateX(30%);-webkit-transform: translateX(30%);">Un creuset des arts, une réunion des sens. La technologie se met au service de l’artiste pour lui permettre de mixer les genres. Grâce à la réalité augmentée, une œuvre statique prend vie. Comme extension du réel ou entièrement virtuelle, l’œuvre créée ainsi réagit au visiteur, se meut, produit un son ou même une odeur ? S’exprimer à travers l’art, autrement.</p>
           </div>
         </div>
-
-        <div class="container section-content">
-          <div class="row">
-            <div class="col-md-6 order-md-2 text-md-right my-auto">
-              <div class="element-line">
-                <img class="img-fluid" src="{{ asset('/media/logo/logo_color_alpha.png') }}" style="max-height: 300px">
-              </div>
-            </div>
-            <div class="col-md-6 text-md-left my-auto">
-              <div class="element-line">
-                <h1>Modèles et rendus 3D</h1>
-                <p class='slider' style="opacity: 0;transform: translateX(-30%);-webkit-transform: translateX(-30%);">Précision et qualité des modèles 3D. Argon travaille en étroite collaboration avec 3DM pour la création et le rendu de modèles en trois dimensions. Depuis 2015, cette entreprise réalise des images et media pour la visualisation architecturale et a acquis une importante expérience pratique en la matière. Les modèles 3D et textures générés par 3DM sont intégrées à nos applications pour obtenir un rendu détaillé et réaliste.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="container section-content">
-          <div class="row">
-            <div class="col-md-6 text-md-left my-auto">
-              <div class="element-line">
-                <img class="img-fluid" src="{{ asset('/media/logo/logo_color_alpha.png') }}" style="max-height: 300px">
-              </div>
-            </div>
-            <div class="col-md-6 text-md-right my-auto">
-              <div class="element-line">
-                <h1>Adaptation de la solution</h1>
-                <p class='slider' style="opacity: 0;transform: translateX(30%);-webkit-transform: translateX(30%);">Comme chez le couturier. Notre équipe apprécie se mettre au défi pour que notre créativité s’adapte parfaitement à tes besoins et à ceux de ton public cible. À travers un développement agile ainsi qu’une communication étroite avec nos clients, nous apportons à chaque projet une réponse sur mesure.</p>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
-    <div class="container-fluid paroller" style="background: url({{ URL::asset('/media/images/3dm_4.png') }}) no-repeat center; background-size: cover; height: 400px" data-paroller-factor="0.2"></div>
+  <div class="container-fluid paroller" style="background: url({{ URL::asset('/media/images/3dm_4.png') }}) no-repeat center; background-size: cover; height: 400px" data-paroller-factor="0.2"></div>
 
     <section id="mobile-app" class="text-center">
       <div class="container section-header">
@@ -239,6 +209,15 @@
             </div>
           </div>
         </div>
+        <div class="row">
+          <div class="col-md-12 text-md-left">
+            <div class="element-line">
+              <h1>3DM - Visualisation architecturale</h1>
+              <p>Précision et qualité des modèles 3D. Argon travaille en étroite collaboration avec 3DM pour la création et le rendu de modèles en trois dimensions. Depuis 2015, cette entreprise réalise des images et media pour la visualisation architecturale et a acquis une importante expérience pratique en la matière. Les modèles 3D et textures générés par 3DM sont intégrées à nos applications pour obtenir un rendu détaillé et réaliste.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -247,7 +226,7 @@
         <div class ="section-title">
           <h1 class='slider' style="opacity: 0;transform: translateY(30%);-webkit-transform: translateY(30%);">NOUS CONTACTER</h1>
         </div>
-        <p class="lead">Nous avons éveillé ton intérêt ? Fais nous part de tes idées de projets et nous t’apportons la solutions adaptée.</p>
+        <p class="lead">Notre équipe apprécie se mettre au défi pour que notre créativité s’adapte parfaitement à tes besoins et à ceux de ton public cible. À travers un développement agile ainsi qu’une communication étroite avec nos clients, nous apportons à chaque projet une réponse sur mesure.</p>
       </div>
       <div class="container section-content">
         <div class="row">

@@ -8,7 +8,6 @@ $(document).ready(function(){
     factor: -0.1,
     type: 'foreground',
     direction: 'horizontal',
-    transition: 'transform 0.5s ease'
   });
 
   $('#navigation').sticky({topSpacing:0});
@@ -45,31 +44,62 @@ $(document).ready(function(){
     $('.paroller').paroller();
   });
 
-  window.addEventListener('scroll', function(e) {
-    // back to top element
-    if ($(".navbar-custom .navbar-collapse .menu-nav .nav-item .nav-link.active")[0]){
-    } else {
-      document.getElementById("default-link").classList.add("active");
-    }
-
-    // parallax mask for VR illustration
-    var clip = document.querySelector('#vr-clip-rect');
-    console.log(clip.getAttribute('x'));
-  });
-});
-
-window.addEventListener("load", function(){
-  window.cookieconsent.initialise({
-    "palette": {
-      "popup": {
-        "background": "#fa7268",
-        "text": "#ffffff"
-      },
-      "button": {
-        "background": "transparent",
-        "text": "#ffffff",
-        "border": "#ffffff"
+  window.addEventListener('scroll',
+    function(e) {
+      // back to top element
+      if ($(".navbar-custom .navbar-collapse .menu-nav .nav-item .nav-link.active")[0]){
+      } else {
+        document.getElementById("default-link").classList.add("active");
       }
-    }
-  })
+    }, false
+  );
+
+  // horizontal parallax on clip elements
+  var parallaxMaster = document.querySelector('#parallax-svg-master');
+  var svgElement = document.querySelector('#parallax-svg');
+  var clipElement = document.querySelector('#parallax-clip');
+  var svgPoint = svgElement.createSVGPoint();
+  var initialX= parseFloat(clipElement.getAttribute('x'));
+
+  function updateSVGParallax(svgXCoord){
+    clipElement.setAttribute('x', initialX + svgXCoord);
+  }
+
+  function screenToSVG(val, svg){
+    return val * svg.getScreenCTM().inverse().a;
+  }
+
+  window.addEventListener('scroll',
+    function(e) {
+      var st = window.getComputedStyle(parallaxMaster, null);
+      var tr = st.getPropertyValue("-webkit-transform") ||
+         st.getPropertyValue("-moz-transform") ||
+         st.getPropertyValue("-ms-transform") ||
+         st.getPropertyValue("-o-transform") ||
+         st.getPropertyValue("transform") ||
+         "fail...";
+
+      var mat = tr.match(/^matrix\((.+)\)$/);
+      var xCoord = mat ? parseFloat(mat[1].split(', ')[4]) : 0;
+      updateSVGParallax(screenToSVG(xCoord ,svgElement));
+    }, false
+  );
 });
+
+window.addEventListener("load",
+  function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#fa7268",
+          "text": "#ffffff"
+        },
+        "button": {
+          "background": "transparent",
+          "text": "#ffffff",
+          "border": "#ffffff"
+        }
+      }
+    })
+  }, false
+);

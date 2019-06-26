@@ -25,7 +25,7 @@
   <meta name="theme-color" content="#ffffff">
   <!-- jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="{{ asset('/js/jquery.paroller.min.js') }}"></script>
+  <script src="{{ asset('/js/jquery.paroller.js') }}"></script>
   <script src="{{ asset('/js/jquery.sticky.js') }}"></script>
   <script src="{{ asset('/js/jquery.appear.js') }}"></script>
 
@@ -73,11 +73,11 @@
 			<?php
       $menu_pages = array ('about', 'mobile-app','clients', 'team', 'contact');
 			echo "<li class=\"nav-item\">";
-			echo "<a id=\"default-link\" class=\"nav-link smooth-scrolling active\" href=\"#$menu_pages[0]\">".$menu_pages[0]."</a>";
+			echo "<a id=\"default-link\" class=\"nav-link smooth-scrolling active\" href=\"#$menu_pages[0]\">".__("navigation.".$menu_pages[0])."</a>";
 			echo "</li>";
 			for ( $i = 1; $i < count($menu_pages); ++$i ) {
 				echo "<li class=\"nav-item\">";
-				echo "<a class=\"nav-link smooth-scrolling\" href=\"#$menu_pages[$i]\">".$menu_pages[$i]."</a>";
+				echo "<a class=\"nav-link smooth-scrolling\" href=\"#$menu_pages[$i]\">".__("navigation.".$menu_pages[$i])."</a>";
 				echo "</li>";
 			}?>
 		</ul>
