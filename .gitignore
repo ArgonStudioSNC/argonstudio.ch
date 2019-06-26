@@ -1,6 +1,7 @@
 /node_modules
 /public/hot
 /public/storage
+/public/3dmxr
 /storage/*.key
 /vendor
 .env

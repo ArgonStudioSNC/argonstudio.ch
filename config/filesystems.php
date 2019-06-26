@@ -57,8 +57,8 @@ return [
 
         'assetbundles' => [
             'driver' => 'local',
-            'root' => storage_path('app/public/3DMXR'),
-            'url' => env('APP_URL').'/3DMXR',
+            'root' => storage_path('app/public/3dmxr'),
+            'url' => env('APP_URL').'/3dmxr',
             'visibility' => 'public',
         ],
 
