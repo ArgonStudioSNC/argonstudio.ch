@@ -55,6 +55,13 @@ return [
             'visibility' => 'public',
         ],
 
+        'assetbundles' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/3DMXR'),
+            'url' => env('APP_URL').'/3DMXR',
+            'visibility' => 'public',
+        ],
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),

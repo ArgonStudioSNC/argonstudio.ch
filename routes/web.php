@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::get('/terms-and-policies', function () {
     return view('terms-and-policies');
 });
+
+Route::get('/3dm-xr', function () {
+    return redirect('https://play.google.com/store/apps/details?id=com.ThirdDimensionMedia.MixedReality');
+});
