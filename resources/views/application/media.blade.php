@@ -1,7 +1,8 @@
 @extends('layouts/default')
 
-@section('pageTitle', 'Terms and Policies')
+@section('pageTitle', 'Media')
 
 @section('content')
+
 
 @endsection

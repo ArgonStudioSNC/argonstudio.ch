@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html class="">
 
 <head>
 
@@ -37,52 +37,11 @@
 
 </header>
 
-<body>
+<body class="d-flex flex-column h-100">
 
 	<script>document.body.classList.add('fade-out');</script>
 
-  <nav id='navigation' class="navbar navbar-expand-sm navbar-dark navbar-custom" role ="navigation">
-	<!-- Brand -->
-	<a class="navbar-brand smooth-scrolling" href="#">
-		<img src="{{ asset('/media/logo/argon_banner_trimed.png') }}" alt="Argon logo"/>
-	</a>
-
-	<!-- Toggler/collapsibe Button -->
-	<button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-controls="collapsibleNavbar" data-target="#collapsibleNavbar">
-		<i class="fas fa-bars fa-2x"></i>
-	</button>
-
-	<!-- Navbar links -->
-	<div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav lang-nav">
-			<?php
-      /*
-			$current_lang = Languages::getLanguage();
-			$url = explode ( '?', $_SERVER ['REQUEST_URI'], 2 ) [0];
-			foreach ( Languages::LANGS as $lang ) {
-				if ($current_lang == $lang) {
-					echo "<li class=\"nav-item icon-hexagon\"><span><a class=\"nav-link active\" href=\"$url?" . Util::set_param__current_url ( 'lang', $lang ) . "\">$lang</a></span></li>";
-				} else {
-					echo "<li class=\"nav-item\"><span><a class=\"nav-link\" href=\"$url?" . Util::set_param__current_url ( 'lang', $lang ) . "\">$lang</a></span></li>";
-				}
-			}
-      */
-      ?>
-		</ul>
-		<ul class="navbar-nav menu-nav ml-auto">
-			<?php
-      $menu_pages = array ('about', 'mobile-app','clients', 'team', 'contact');
-			echo "<li class=\"nav-item\">";
-			echo "<a id=\"default-link\" class=\"nav-link smooth-scrolling active\" href=\"#$menu_pages[0]\">".__("navigation.".$menu_pages[0])."</a>";
-			echo "</li>";
-			for ( $i = 1; $i < count($menu_pages); ++$i ) {
-				echo "<li class=\"nav-item\">";
-				echo "<a class=\"nav-link smooth-scrolling\" href=\"#$menu_pages[$i]\">".__("navigation.".$menu_pages[$i])."</a>";
-				echo "</li>";
-			}?>
-		</ul>
-	</div>
-</nav>
+  @yield('navbar')
 
   @yield('content')
 
@@ -90,7 +49,7 @@
 		<i class="fas fa-angle-up fa-2x"></i>
 	</a>
 
-  <footer class="fluid-container text-center">
+  <footer class="footer mt-auto container-fluid text-center">
     <div class="container">
       <div class="row">
         <div class="col-md-6 social-links order-md-2 text-md-right">

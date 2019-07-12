@@ -1,19 +1,6 @@
-@extends('layout')
+@extends('layouts/home')
 
 @section('pageTitle', 'Home')
-
-@section('header')
-
-<div class="wrapper-home">
-  <div id='bgimage'></div>
-  <video playsinline autoplay muted loop poster="{{ asset('/media/images/intro-static-bg.jpg') }}" id='bgvid'>
-    <source src="{{ asset('/media/videos/intro-video-bg.webm') }}" type="video/webm">
-    <source src="{{ asset('/media/videos/intro-video-bg.ogg') }}" type="video/ogg">
-    <source src="{{ asset('/media/videos/intro-video-bg.mp4') }}" type="video/mp4">
-  </video>
-</div>
-
-@endsection
 
 @section('content')
 

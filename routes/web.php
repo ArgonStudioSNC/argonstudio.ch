@@ -13,12 +13,16 @@
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
 Route::get('/terms-and-policies', function () {
     return view('terms-and-policies');
-});
+})->name('terms-and-policies');
+
+Route::get('/application/media', function () {
+    return view('application/media');
+})->name('media');
 
 Route::get('/3dm-xr', function () {
-    return redirect('https://play.google.com/store/apps/details?id=com.ThirdDimensionMedia.MixedReality');
+    return view('get-the-app');
 });
