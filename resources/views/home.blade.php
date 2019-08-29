@@ -18,20 +18,22 @@
             <div class="row">
                 <div class="col-md-6 order-md-2 text-md-right my-auto">
                     <div class="element-line position-relative">
-                        <img class="img-fluid position-absolute" src="{{ asset('/media/illustrations/AR_foreground.svg') }}">
-                        <svg class="position-absolute" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1252.08 1149" xml:space="preserve">
+                        <svg class="position-absolute" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1252.08 1149" xml:space="preserve" class="position-absolute" style="max-height: 400px; width: auto">
                             <defs>
                                 <g>
-                                    <clipPath id="clip">
-                                        <rect fill="#ffffff" x="538" y="98" width="413" height="635" transition="x 0.5s ease"/>
-                                    </clipPath>
+                                    <mask id="mask">
+                                        <image xmlns:xlink= "http://www.w3.org/1999/xlink" xlink:href="{{ asset('/media/illustrations/AR_mask.svg') }}" height='100%' width='100%' class="paroller" data-paroller-factor="-0.9" data-paroller-type="foreground" data-paroller-direction="horizontal" data-paroller-transition="transform .5s ease" style="transform: translate(-200px, 0px)"/>
+                                    </mask>
                                 </g>
                             </defs>
-                            <g clip-path="url(#clip)" >
+                            <g mask="url(#mask)">
                                 <image xmlns:xlink= "http://www.w3.org/1999/xlink" xlink:href="{{ asset('/media/illustrations/AR_augmentation.svg') }}" height='100%' width='100%'/>
                             </g>
+                            <g>
+                                <image xmlns:xlink= "http://www.w3.org/1999/xlink" xlink:href="{{ asset('/media/illustrations/AR_foreground.svg') }}" height='100%' width='100%' class="paroller" data-paroller-factor="-0.9" data-paroller-type="foreground" data-paroller-direction="horizontal" data-paroller-transition="transform .5s ease" style="transform: translate(-200px, 0px)"/>
+                            </g>
                         </svg>
-                        <img class="img-fluid" src="{{ asset('/media/illustrations/AR_background.svg') }}" style="max-height: 400px">
+                        <img class="img-fluid" src="{{ asset('/media/illustrations/AR_background.svg') }}" style="max-height: 400px; width: auto">
                     </div>
                 </div>
                 <div class="col-md-6 text-md-left my-auto">
@@ -46,8 +48,12 @@
                 <div class="row">
                     <div class="col-md-6 text-md-left my-auto">
                         <div class="element-line position-relative">
-                            <img class="img-fluid position-absolute" src="{{ asset('/media/illustrations/VR_foreground.svg') }}">
-                            <img class="img-fluid" src="{{ asset('/media/illustrations/VR_background.svg') }}" style="max-height: 300px">
+                            <svg class="position-relative img-fluid" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1252.08 1149" xml:space="preserve" style="max-height: 400px">
+                                <g>
+                                    <image xmlns:xlink= "http://www.w3.org/1999/xlink" xlink:href="{{ asset('/media/illustrations/VR_background.svg') }}" height='100%' width='100%'/>
+                                    <image xmlns:xlink= "http://www.w3.org/1999/xlink" xlink:href="{{ asset('/media/illustrations/VR_foreground.svg') }}" height='100%' width='100%' class="paroller" data-paroller-factor="0.25" data-paroller-type="foreground" data-paroller-direction="horizontal" data-paroller-transition="transform .5s ease" style="transform: translate(-300px, 0px)"/>
+                                </g>
+                            </svg>
                         </div>
                     </div>
                     <div class="col-md-6 text-md-right my-auto">
@@ -63,7 +69,7 @@
                 <div class="row">
                     <div class="col-md-6 order-md-2 text-md-right my-auto">
                         <div class="element-line">
-                            <img class="img-fluid" src="{{ asset('/media/illustrations/urbanisme_background.svg') }}" style="max-height: 300px">
+                            <img class="img-fluid" src="{{ asset('/media/illustrations/urbanisme_background.svg') }}" style="max-height: 3^400px">
                         </div>
                     </div>
                     <div class="col-md-6 text-md-left my-auto">
@@ -79,7 +85,7 @@
                 <div class="row">
                     <div class="col-md-6 text-md-left my-auto">
                         <div class="element-line">
-                            <img class="img-fluid" src="{{ asset('/media/illustrations/art_background.svg') }}" style="max-height: 300px">
+                            <img class="img-fluid" src="{{ asset('/media/illustrations/art_background.svg') }}" style="max-height: 400px">
                         </div>
                     </div>
                     <div class="col-md-6 text-md-right my-auto">

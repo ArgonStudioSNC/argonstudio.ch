@@ -122,7 +122,7 @@
             var $this = $(this);
             var width = $(window).width();
             var offset = $this.offset().top;
-            var height = $this.outerHeight();
+            var height = $this[0].getBoundingClientRect().height;
 
             var dataType = $this.data('paroller-type');
             var dataDirection = $this.data('paroller-direction');
@@ -157,7 +157,7 @@
                 var scrolling = $(this).scrollTop();
                 width = $(window).width();
                 offset = $this.offset().top;
-                height = $this.outerHeight();
+                height = $this[0].getBoundingClientRect().height;
                 factor = setMovement.factor($this, width, options);
 
                 bgOffset = Math.round(offset * factor);
@@ -191,6 +191,8 @@
             $(window).on('scroll', function () {
                 var scrolling = $(this).scrollTop();
                 var scrollTop = $(document).scrollTop();
+
+                console.log($this[0].getBoundingClientRect().height);
 
                 if (scrollTop === 0) {
                     factor = 0;
