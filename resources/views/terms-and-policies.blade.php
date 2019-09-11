@@ -1,4 +1,4 @@
-@extends('layouts/default')
+@extends('layouts/master')
 
 @section('pageTitle', 'Terms and Policies')
 

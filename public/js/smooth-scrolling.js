@@ -1,35 +1,27 @@
 $(document).ready(function(){
-  // Add smooth scrolling to all links
-  $(".smooth-scrolling").on('click', function(event) {
+    // Add smooth scrolling to all links
+    $(".smooth-scrolling").on('click', function(event) {
+        // Make sure we access an element from the same page
+        if (this.pathname.indexOf(window.location.pathname) == 0){
+            // Prevent default anchor click behavior
+            event.preventDefault();
 
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
+            // Store hash
+            var hash = this.hash;
 
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top - navHeight
-      }, 800, 'swing', function(){
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        if(history.pushState) {
-          history.pushState(null, null, hash);
-        }
-        else {
-          location.hash = hash;
-        }
-      });
-    } // End if
-    else {
-      event.preventDefault();
-      $('html, body').animate({
-        scrollTop: 0
-      }, 800, 'swing');
-      return false;
-    }
-  });
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+                scrollTop: (hash != "") ? ($(hash).offset().top - navHeight) : 0
+            }, 800, 'swing', function(){
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                if(history.pushState) {
+                    history.pushState(null, null, hash);
+                }
+                else {
+                    location.hash = hash;
+                }
+            });
+        } // End if
+    });
 });
