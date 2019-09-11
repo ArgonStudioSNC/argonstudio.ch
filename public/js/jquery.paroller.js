@@ -122,20 +122,11 @@
 
         return this.each(function () {
             const $this = $(this);
-            const $children = $this.find('.paroller-child');
+            const children = $this.find('.paroller-child');
 
             let height = $this.outerHeight();
             let width = $(window).width();
             let elemTop = $this.offset().top;
-            let scrollOffset = 0;
-
-            let withScrollOffset = function(scrollTop, transform) {
-                if (! scrollTop) {
-                    scrollOffset = 0;
-                }
-                // console.log(`offset ${scrollOffset} => ${transform - scrollOffset}`)
-                return transform - scrollOffset;
-            }
 
             const dataType = $this.data('paroller-type');
             const dataDirection = $this.data('paroller-direction');
@@ -159,22 +150,21 @@
             }
             else if (type === 'foreground') {
                 if (direction === 'vertical') {
-                    if ($children.length == 0){
+                    if (children.length == 0){
                         setDirection.vertical($this, transform, transition, oldTransform);
                     }
                     else {
-                        $children.each(function () {
-                            oldTransform = $ (this).css('transform');
+                        children.each(function () {
                             setDirection.vertical($( this ), transform, transition, oldTransform);
                         });
                     }
                 }
                 else if (direction === 'horizontal') {
-                    if ($children.length == 0){
+                    if (children.length == 0){
                         setDirection.horizontal($this, transform, transition, oldTransform);
                     }
                     else {
-                        $children.each(function () {
+                        children.each(function () {
                             setDirection.horizontal($( this ), transform, transition, oldTransform);
                         });
                     }
@@ -189,7 +179,7 @@
                 factor = setMovement.factor($this, width, options);
 
                 bgOffset = Math.round(elemTop * factor);
-                let transform = withScrollOffset($(document).scrollTop(), Math.round((elemTop - (windowHeight / 2) + height) * factor));
+                let transform = Math.round((elemTop - (windowHeight / 2) + height) * factor);
 
                 if (! working) {
                     window.requestAnimationFrame(scrollAction);
@@ -207,24 +197,24 @@
                 }
                 else if ((type === 'foreground') && (scrolling <= documentHeight)) {
                     if (direction === 'vertical') {
-                        if ($children.length == 0){
+                        if (children.length == 0){
                             clearPositions.foreground($this);
                             setDirection.vertical($this, transform, transition);
                         }
                         else {
-                            $children.each(function () {
+                            children.each(function () {
                                 clearPositions.foreground($( this ));
                                 setDirection.vertical($( this ), transform, transition);
                             });
                         }
                     }
                     else if (direction === 'horizontal') {
-                        if ($children.length == 0){
+                        if (children.length == 0){
                             clearPositions.foreground($this);
                             setDirection.horizontal($this, transform, transition);
                         }
                         else {
-                            $children.each(function () {
+                            children.each(function () {
                                 clearPositions.foreground($( this ));
                                 setDirection.horizontal($( this ), transform, transition);
                             });
@@ -235,10 +225,9 @@
 
             $(window).on('load scroll', function () {
                 let scrolling = $(this).scrollTop();
-                let scrollTop = $(document).scrollTop();
                 factor = setMovement.factor($this, width, options);
-
-                let transform = withScrollOffset(scrollTop, Math.round(((elemTop - (windowHeight / 2) + height) - scrolling) * factor));
+                let bgOffset = Math.round((elemTop - scrolling) * factor);
+                let transform = Math.round(((elemTop - (windowHeight / 2) + height) - scrolling) * factor);
 
                 if (! working) {
                     window.requestAnimationFrame(scrollAction);
@@ -255,22 +244,21 @@
                 }
                 else if ((type === 'foreground') && (scrolling <= documentHeight)) {
                     if (direction === 'vertical') {
-                        if ($children.length == 0){
+                        if (children.length == 0){
                             setDirection.vertical($this, transform, transition, oldTransform);
                         }
                         else {
-                            $children.each(function () {
-                                oldTransform = $ (this).css('transform');
+                            children.each(function () {
                                 setDirection.vertical($( this ), transform, transition, oldTransform);
                             });
                         }
                     }
                     else if (direction === 'horizontal') {
-                        if ($children.length == 0){
+                        if (children.length == 0){
                             setDirection.horizontal($this, transform, transition, oldTransform);
                         }
                         else {
-                            $children.each(function () {
+                            children.each(function () {
                                 setDirection.horizontal($( this ), transform, transition, oldTransform);
                             });
                         }

@@ -48,10 +48,10 @@
                 <div class="row">
                     <div class="col-md-6 text-md-left my-auto">
                         <div class="element-line position-relative">
-                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1252.08 1149" xml:space="preserve" style="max-height: 400px; width: auto" class="position-relative img-fluid " data-paroller-factor="0.4" data-paroller-type="foreground" data-paroller-direction="horizontal" data-paroller-transition="transform .5s ease">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1252.08 1149" xml:space="preserve" style="max-height: 400px; width: auto" class="paroller position-relative img-fluid" data-paroller-factor="0.4" data-paroller-type="foreground" data-paroller-direction="horizontal" data-paroller-transition="transform .5s ease">
                                 <g>
                                     <image xmlns:xlink= "http://www.w3.org/1999/xlink" xlink:href="{{ asset('/media/illustrations/VR_background.svg') }}" height='100%' width='100%'/>
-                                    <image xmlns:xlink= "http://www.w3.org/1999/xlink" xlink:href="{{ asset('/media/illustrations/VR_foreground.svg') }}" height='100%' width='100%' class="paroller-child"/>
+                                    <image xmlns:xlink= "http://www.w3.org/1999/xlink" xlink:href="{{ asset('/media/illustrations/VR_foreground.svg') }}" x="-200px" height='100%' width='100%' class="paroller-child" />
                                 </g>
                             </svg>
                         </div>
@@ -99,7 +99,7 @@
         </div>
     </section>
 
-    <div class="container-fluid paroller" style="background: url({{ URL::asset('/media/images/3dm_4.png') }}) no-repeat center; background-size: cover; height: 400px; margin-top: 100px" data-paroller-factor="0.2"></div>
+    <div class="container-fluid paroller" style="background: url({{ URL::asset('/media/images/3dm_4.png') }}) no-repeat center; background-size: cover; height: 400px; margin-top: 100px" data-paroller-factor="0.15"></div>
 
     <section id="mobile-app" class="text-center">
         <div class="container section-header">
@@ -163,7 +163,7 @@
         </div>
     </section>
 
-    <div class="container-fluid" style="background: url({{ URL::asset('/media/images/3dm_3.jpg') }}) no-repeat center; background-size: cover; height: 400px; margin-top: 100px" data-paroller-factor="0.5"></div>
+    <div class="container-fluid paroller" style="background: url({{ URL::asset('/media/images/3dm_3.jpg') }}) no-repeat center; background-size: cover; height: 400px; margin-top: 100px" data-paroller-factor="0.5"></div>
 
     <section id="team">
         <div class="container section-header text-center">
