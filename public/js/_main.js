@@ -4,11 +4,6 @@ document.documentElement.style.setProperty('--nav-height', navHeight + 'px');
 $(document).ready(function(){
   $(".wrapper-home").css("height", getViewportHeight());
   $('.paroller').paroller(); // paroller init
-  $('.paroller-element').paroller({
-    factor: -0.1,
-    type: 'foreground',
-    direction: 'horizontal',
-  });
 
   $('#navigation').sticky({topSpacing:0});
 
@@ -54,36 +49,6 @@ $(document).ready(function(){
     }, false
   );
 
-  // horizontal parallax on clip elements
-  var parallaxMaster = document.querySelector('#parallax-svg-master');
-  var svgElement = document.querySelector('#parallax-svg');
-  var clipElement = document.querySelector('#parallax-clip');
-  var svgPoint = svgElement.createSVGPoint();
-  var initialX= parseFloat(clipElement.getAttribute('x'));
-
-  function updateSVGParallax(svgXCoord){
-    clipElement.setAttribute('x', initialX + svgXCoord);
-  }
-
-  function screenToSVG(val, svg){
-    return val * svg.getScreenCTM().inverse().a;
-  }
-
-  window.addEventListener('scroll',
-    function(e) {
-      var st = window.getComputedStyle(parallaxMaster, null);
-      var tr = st.getPropertyValue("-webkit-transform") ||
-         st.getPropertyValue("-moz-transform") ||
-         st.getPropertyValue("-ms-transform") ||
-         st.getPropertyValue("-o-transform") ||
-         st.getPropertyValue("transform") ||
-         "fail...";
-
-      var mat = tr.match(/^matrix\((.+)\)$/);
-      var xCoord = mat ? parseFloat(mat[1].split(', ')[4]) : 0;
-      updateSVGParallax(screenToSVG(xCoord ,svgElement));
-    }, false
-  );
 });
 
 window.addEventListener("load",

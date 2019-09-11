@@ -1,8 +1,10 @@
+'use strict';
+
 /**
- * jQuery plugin paroller.js v1.4.6
- * https://github.com/tgomilar/paroller.js
- * preview: https://tgomilar.github.io/paroller/
- **/
+* jQuery plugin paroller.js v1.4.6
+* https://github.com/tgomilar/paroller.js
+* preview: https://tgomilar.github.io/paroller/
+**/
 (function (factory) {
     'use strict';
     if (typeof define === 'function' && define.amd) {
@@ -16,12 +18,12 @@
 })(function ($) {
     'use strict';
 
-    var working = false;
-    var scrollAction = function() {
+    let working = false;
+    let scrollAction = function() {
         working = false;
     };
 
-    var setDirection = {
+    let setDirection = {
         bgVertical: function (elem, bgOffset) {
             return elem.css({'background-position': 'center ' + -bgOffset + 'px'});
         },
@@ -50,32 +52,32 @@
         }
     };
 
-    var setMovement = {
+    let setMovement = {
         factor: function (elem, width, options) {
-            var dataFactor = elem.data('paroller-factor');
-            var factor = (dataFactor) ? dataFactor : options.factor;
+            let dataFactor = elem.data('paroller-factor');
+            let factor = (dataFactor) ? dataFactor : options.factor;
             if (width < 576) {
-                var dataFactorXs = elem.data('paroller-factor-xs');
-                var factorXs = (dataFactorXs) ? dataFactorXs : options.factorXs;
+                let dataFactorXs = elem.data('paroller-factor-xs');
+                let factorXs = (dataFactorXs) ? dataFactorXs : options.factorXs;
                 return (factorXs) ? factorXs : factor;
             }
             else if (width <= 768) {
-                var dataFactorSm = elem.data('paroller-factor-sm');
-                var factorSm = (dataFactorSm) ? dataFactorSm : options.factorSm;
+                let dataFactorSm = elem.data('paroller-factor-sm');
+                let factorSm = (dataFactorSm) ? dataFactorSm : options.factorSm;
                 return (factorSm) ? factorSm : factor;
             }
             else if (width <= 1024) {
-                var dataFactorMd = elem.data('paroller-factor-md');
-                var factorMd = (dataFactorMd) ? dataFactorMd : options.factorMd;
+                let dataFactorMd = elem.data('paroller-factor-md');
+                let factorMd = (dataFactorMd) ? dataFactorMd : options.factorMd;
                 return (factorMd) ? factorMd : factor;
             }
             else if (width <= 1200) {
-                var dataFactorLg = elem.data('paroller-factor-lg');
-                var factorLg = (dataFactorLg) ? dataFactorLg : options.factorLg;
+                let dataFactorLg = elem.data('paroller-factor-lg');
+                let factorLg = (dataFactorLg) ? dataFactorLg : options.factorLg;
                 return (factorLg) ? factorLg : factor;
             } else if (width <= 1920) {
-                var dataFactorXl = elem.data('paroller-factor-xl');
-                var factorXl = (dataFactorXl) ? dataFactorXl : options.factorXl;
+                let dataFactorXl = elem.data('paroller-factor-xl');
+                let factorXl = (dataFactorXl) ? dataFactorXl : options.factorXl;
                 return (factorXl) ? factorXl : factor;
             } else {
                 return factor;
@@ -89,7 +91,7 @@
         }
     };
 
-    var clearPositions = {
+    let clearPositions = {
         background: function (elem) {
             return elem.css({'background-position': 'unset'});
         },
@@ -102,11 +104,11 @@
     };
 
     $.fn.paroller = function (options) {
-        var windowHeight = $(window).height();
-        var documentHeight = $(document).height();
+        const windowHeight = $(window).height();
+        const documentHeight = $(document).height();
 
         // default options
-        var options = $.extend({
+        options = $.extend({
             factor: 0, // - to +
             factorXs: 0, // - to +
             factorSm: 0, // - to +
@@ -115,26 +117,28 @@
             factorXl: 0, // - to +
             transition: 'transform .1s ease', // CSS transition
             type: 'background', // foreground
-            direction: 'vertical' // horizontal
+            direction: 'vertical', // horizontal
         }, options);
 
         return this.each(function () {
-            var $this = $(this);
-            var width = $(window).width();
-            var offset = $this.offset().top;
-            var height = $this.outerHeight();
+            const $this = $(this);
+            const children = $this.find('.paroller-child');
 
-            var dataType = $this.data('paroller-type');
-            var dataDirection = $this.data('paroller-direction');
-            var dataTransition = $this.data('paroller-transition');
-            var oldTransform = $this.css('transform');
+            let height = $this.outerHeight();
+            let width = $(window).width();
+            let elemTop = $this.offset().top;
 
-            var transition = (dataTransition) ? dataTransition : options.transition;
-            var type = (dataType) ? dataType : options.type;
-            var direction = (dataDirection) ? dataDirection : options.direction;
-            var factor = 0;
-            var bgOffset = setMovement.bgOffset(offset, factor);
-            var transform = setMovement.transform(offset, factor, windowHeight, height);
+            const dataType = $this.data('paroller-type');
+            const dataDirection = $this.data('paroller-direction');
+            const dataTransition = $this.data('paroller-transition');
+            let oldTransform = $this.css('transform');
+
+            const transition = (dataTransition) ? dataTransition : options.transition;
+            const type = (dataType) ? dataType : options.type;
+            const direction = (dataDirection) ? dataDirection : options.direction;
+            let factor = 0;
+            let bgOffset = setMovement.bgOffset(elemTop, factor);
+            let transform = setMovement.transform(elemTop, factor, windowHeight, height);
 
             if (type === 'background') {
                 if (direction === 'vertical') {
@@ -146,22 +150,36 @@
             }
             else if (type === 'foreground') {
                 if (direction === 'vertical') {
-                    setDirection.vertical($this, transform, transition, oldTransform);
+                    if (children.length == 0){
+                        setDirection.vertical($this, transform, transition, oldTransform);
+                    }
+                    else {
+                        children.each(function () {
+                            setDirection.vertical($( this ), transform, transition, oldTransform);
+                        });
+                    }
                 }
                 else if (direction === 'horizontal') {
-                    setDirection.horizontal($this, transform, transition, oldTransform);
+                    if (children.length == 0){
+                        setDirection.horizontal($this, transform, transition, oldTransform);
+                    }
+                    else {
+                        children.each(function () {
+                            setDirection.horizontal($( this ), transform, transition, oldTransform);
+                        });
+                    }
                 }
             }
 
             $(window).on('resize', function () {
-                var scrolling = $(this).scrollTop();
+                let scrolling = $(this).scrollTop();
                 width = $(window).width();
-                offset = $this.offset().top;
+                elemTop = $this.offset().top;
                 height = $this.outerHeight();
                 factor = setMovement.factor($this, width, options);
 
-                bgOffset = Math.round(offset * factor);
-                transform = Math.round((offset - (windowHeight / 2) + height) * factor);
+                bgOffset = Math.round(elemTop * factor);
+                let transform = Math.round((elemTop - (windowHeight / 2) + height) * factor);
 
                 if (! working) {
                     window.requestAnimationFrame(scrollAction);
@@ -178,28 +196,38 @@
                     }
                 }
                 else if ((type === 'foreground') && (scrolling <= documentHeight)) {
-                    clearPositions.foreground($this);
                     if (direction === 'vertical') {
-                        setDirection.vertical($this, transform, transition);
+                        if (children.length == 0){
+                            clearPositions.foreground($this);
+                            setDirection.vertical($this, transform, transition);
+                        }
+                        else {
+                            children.each(function () {
+                                clearPositions.foreground($( this ));
+                                setDirection.vertical($( this ), transform, transition);
+                            });
+                        }
                     }
                     else if (direction === 'horizontal') {
-                        setDirection.horizontal($this, transform, transition);
+                        if (children.length == 0){
+                            clearPositions.foreground($this);
+                            setDirection.horizontal($this, transform, transition);
+                        }
+                        else {
+                            children.each(function () {
+                                clearPositions.foreground($( this ));
+                                setDirection.horizontal($( this ), transform, transition);
+                            });
+                        }
                     }
                 }
             });
 
-            $(window).on('scroll', function () {
-                var scrolling = $(this).scrollTop();
-                var scrollTop = $(document).scrollTop();
-
-                if (scrollTop === 0) {
-                    factor = 0;
-                } else {
-                    factor = setMovement.factor($this, width, options);
-                }
-
-                bgOffset = Math.round((offset - scrolling) * factor);
-                transform = Math.round(((offset - (windowHeight / 2) + height) - scrolling) * factor);
+            $(window).on('load scroll', function () {
+                let scrolling = $(this).scrollTop();
+                factor = setMovement.factor($this, width, options);
+                let bgOffset = Math.round((elemTop - scrolling) * factor);
+                let transform = Math.round(((elemTop - (windowHeight / 2) + height) - scrolling) * factor);
 
                 if (! working) {
                     window.requestAnimationFrame(scrollAction);
@@ -216,10 +244,24 @@
                 }
                 else if ((type === 'foreground') && (scrolling <= documentHeight)) {
                     if (direction === 'vertical') {
-                        setDirection.vertical($this, transform, transition, oldTransform);
+                        if (children.length == 0){
+                            setDirection.vertical($this, transform, transition, oldTransform);
+                        }
+                        else {
+                            children.each(function () {
+                                setDirection.vertical($( this ), transform, transition, oldTransform);
+                            });
+                        }
                     }
                     else if (direction === 'horizontal') {
-                        setDirection.horizontal($this, transform, transition, oldTransform);
+                        if (children.length == 0){
+                            setDirection.horizontal($this, transform, transition, oldTransform);
+                        }
+                        else {
+                            children.each(function () {
+                                setDirection.horizontal($( this ), transform, transition, oldTransform);
+                            });
+                        }
                     }
                 }
             });
