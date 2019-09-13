@@ -1,0 +1,14 @@
+.terms-and-policies-heading {
+	text-transform: uppercase;
+}
+
+.terms-and-policies-heading h1 {
+    	color: black;
+    	font-size: 50px;
+    	line-height: 55px;
+    	font-weight: 400;
+}
+
+.terms-and-policies #navbar {
+    top : 100px;
+}

@@ -62,7 +62,7 @@
 @endsection
 
 @section('content')
-<div class="main">
+<div class="main" role="main">
     <section id="about" class="text-center">
         <div class="container section-header">
             <div class="section-title">
