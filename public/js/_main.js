@@ -39,15 +39,6 @@ $(document).ready(function(){
         //todo update paroller
         $('.paroller').paroller();
     });
-
-    window.addEventListener('scroll', function(e)
-    {
-        // back to top element
-        if ($(".navbar-custom .navbar-collapse .menu-nav .nav-item .nav-link.active")[0]){
-        } else {
-            document.getElementById("default-link").classList.add("active");
-        }
-    }, false);
 });
 
 window.addEventListener("load",

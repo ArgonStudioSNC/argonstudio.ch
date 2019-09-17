@@ -3,7 +3,7 @@
 @section('navbar')
 <nav id='navigation' class="navbar navbar-expand-sm navbar-dark navbar-custom" role ="navigation">
     <!-- Brand -->
-    <a class="navbar-brand smooth-scrolling" href="#">
+    <a class="navbar-brand" href="{{ route('website.home') }}">
         <img src="{{ asset('/media/logo/argon_banner_trimed.png') }}" alt="Argon logo"/>
     </a>
 
@@ -70,7 +70,9 @@
         <div class="row d-flex align-items-end">
             <div class="col-md-6 order-md-2 text-md-right">
                 <div class="element-line">
-                    <p>Copyright &copy <?php echo date("Y"); ?> Argon Studio snc. All rights reserved<br><a>Legal mention</a> - <a>Cookies policy</a></p>
+                    <p>Copyright &copy <?php echo date("Y"); ?> Argon Studio snc. All rights reserved<br>
+                        <a href="{{ route('website.terms-and-policies', ['#terms-of-services']) }}">Terms of services</a> -
+                        <a href="{{ route('website.terms-and-policies', ['#privacy-policy']) }}">Privacy policy</a></p>
                 </div>
             </div>
             <div class="col-md-6 text-md-left">

@@ -1,6 +1,7 @@
 $(document).ready(function(){
     // Add smooth scrolling to all links
     $(".smooth-scrolling").on('click', function(event) {
+        $this = this;
         // Make sure we access an element from the same page
         if (this.pathname.indexOf(window.location.pathname) == 0){
             // Prevent default anchor click behavior
@@ -14,12 +15,15 @@ $(document).ready(function(){
             $('html, body').animate({
                 scrollTop: (hash != "") ? ($(hash).offset().top - navHeight) : 0
             }, 800, 'swing', function(){
-                // Add hash (#) to URL when done scrolling (default click behavior)
-                if(history.pushState) {
-                    history.pushState(null, null, hash);
-                }
-                else {
-                    location.hash = hash;
+
+                if (!$this.classList.contains('silent')){
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    if(history.pushState) {
+                        history.pushState(null, null, hash);
+                    }
+                    else {
+                        location.hash = hash;
+                    }
                 }
             });
         } // End if

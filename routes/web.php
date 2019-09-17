@@ -11,18 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
-
-Route::get('/terms-and-policies', function () {
-    return view('terms-and-policies');
-})->name('terms-and-policies');
-
-Route::get('/application/media', function () {
-    return view('application/media');
-})->name('media');
-
-Route::get('/3dm-xr', function () {
-    return view('get-the-app');
-});
+Route::get('/', 'WebsiteController@home')->name('website.home');
+Route::get('/terms-and-policies', 'WebsiteController@termsandpolicies')->name('website.terms-and-policies');
+Route::get('/3dm-xr', 'WebsiteController@gettheapp')->name('website.gettheapp');
