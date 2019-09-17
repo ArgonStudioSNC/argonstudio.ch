@@ -10,7 +10,7 @@
     <div class="container terms-and-policies">
         <div class="row">
             <div class="d-none d-md-block col-md-4">
-                <nav id='navbar' class="navbar-light position-sticky">
+                <nav id='navigation' class="navbar navbar-light position-sticky">
                     <div id="terms-and-policies-accordion" class="accordion">
                         <div id="conditions-generales" class="card">
                             <div id="conditions-generales-heading" class="card-header">
@@ -19,7 +19,7 @@
                             <div id="conditions-generales-collapse" class="collapse" data-parent="#terms-and-policies-accordion" data-text-target="conditions-generales">
                                 <div class="card-body">
                                     <ul>
-                                        <li><a class="nav-link smooth-scrolling silent" href="#title-conditions-generales-1">{{ __('terms-and-policies.cg-1-heading') }}</a></li>
+                                        <li><a class="nav-link smooth-scrolling silent active" href="#title-conditions-generales-1">{{ __('terms-and-policies.cg-1-heading') }}</a></li>
                                         <li><a class="nav-link smooth-scrolling silent" href="#title-conditions-generales-2">{{ __('terms-and-policies.cg-2-heading') }}</a></li>
                                         <li><a class="nav-link smooth-scrolling silent" href="#title-conditions-generales-3">{{ __('terms-and-policies.cg-3-heading') }}</a></li>
                                         <li><a class="nav-link smooth-scrolling silent" href="#title-conditions-generales-4">{{ __('terms-and-policies.cg-4-heading') }}</a></li>
@@ -127,6 +127,9 @@
 </div>
 
 <script>
+// scrollspy
+$('body').scrollspy({target: "#navigation", offset: 70});
+
 let cgBtn = document.getElementById('conditions-generales-btn');
 let policyBtn = document.getElementById('politique-de-confidentialite-btn');
 let cgElem = document.getElementById('text-conditions-generales');

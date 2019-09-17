@@ -7,9 +7,6 @@ $(document).ready(function(){
 
     $('#navigation').sticky({topSpacing:0});
 
-    // add scroll spy
-    $('body').scrollspy({target: ".menu-nav", offset: navHeight + 10});
-
     // collapse navbar on click
     $('.nav-link').click(function() {
         $('.navbar-collapse').collapse('hide');

@@ -33,7 +33,7 @@
             @endphp
             @for ( $i = 0; $i < count($menu_pages); ++$i )
             <li class="nav-item">
-                <a class="nav-link" href="/#{{ $menu_pages[$i] }}">
+                <a class="nav-link" href="{{ route('website.home') . '#' . $menu_pages[$i] }}">
                     {{ __("navigation.".$menu_pages[$i]) }}
                 </a>
             </li>
@@ -71,8 +71,8 @@
             <div class="col-md-6 order-md-2 text-md-right">
                 <div class="element-line">
                     <p>Copyright &copy <?php echo date("Y"); ?> Argon Studio snc. All rights reserved<br>
-                        <a href="{{ route('website.terms-and-policies', ['#terms-of-services']) }}">Terms of services</a> -
-                        <a href="{{ route('website.terms-and-policies', ['#privacy-policy']) }}">Privacy policy</a></p>
+                        <a href="{{ route('website.terms-and-policies') . '#terms-of-services' }}">Terms of services</a> -
+                        <a href="{{ route('website.terms-and-policies') . '#privacy-policy' }}">Privacy policy</a></p>
                 </div>
             </div>
             <div class="col-md-6 text-md-left">
