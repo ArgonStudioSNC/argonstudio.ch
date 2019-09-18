@@ -2,10 +2,11 @@
 
 return [
 
-    'heading' => 'Conditions et politiques',
+    'heading-lead' => 'Prenez connaissance de nos',
+    'heading' => 'Modalités et politiques',
     'cg-heading' => 'Conditions générales pour le développement d’applications en réalité augmentée et réalité virtuelle',
     'cg-1-heading' => 'Objet et champ d’application',
-    'cg-1.1-content' => 'Ces conditions générales (CG) ont pour but de définir les termes sous lesquelles Argon Studio snc, enregistré au registre du commerce du canton de Berne sous le numéro CHE-278.594.791 et dont le siège se situe à la rue du Contrôle 28 – 2503 Biel/Bienne, développe pour ses clients des applications smartphones utilisant les technologies de réalité augmentée (AR) et réalité virtuelle (VR). Argon peut être contacté des façons suivantes :<br>Téléphone: +41 (0)32 323 25 03<br>Email: contact@argonstudio.ch',
+    'cg-1.1-content' => 'Ces conditions générales (CG) ont pour but de définir les termes sous lesquelles Argon Studio snc, enregistré au registre du commerce du canton de Berne sous le numéro CHE-278.594.791 et dont le siège se situe à la rue du Contrôle 28 – 2503 Biel/Bienne, développe pour ses clients des applications smartphones utilisant les technologies de réalité augmentée (AR) et réalité virtuelle (VR).<br>Argon peut être contacté des façons suivantes :<br>Téléphone: <a href="tel:+41323232503">+41 (0)32 323 25 03</a><br>Email: <a href="mailto:contact@argonstudio.ch" target="_top">contact@argonstudio.ch</a>',
     'cg-1.2-content' => 'Lors d’une demande d’offre, ces CG associées à l’offre constituent un ensemble contractuel indissociable. Dans le cas d’une contradiction, l’offre prévaut aux CG.',
     'cg-2-heading' => 'Acceptation des conditions générales',
     'cg-2-content' => 'Lorsque le client requiert une offre, son approbation de cette offre représente son approbation complète du contrat. Le client ne peut accepter le contrat que dans son entièreté.',
@@ -23,7 +24,7 @@ return [
     'cg-4.4-heading' => 'Licences',
     'cg-4.4-content' => 'Les frais de licences pour le développement d’applications iOS, d’applications Android et d’applications en AR et VR sont inclus dans l’offre. Si une application requiert l’acquisition d’une nouvelle licence spécifique, son cout peut être répercuté entièrement ou en partie sur le client. Dans ce cas, le montant sera mentionné dans l’offre.',
     'cg-4.5-heading' => 'Plateforme 3DM XR',
-    'cg-4.5.1-content' => '<b>Définition</b> 3DM XR est une application smartphone disponible sur iOS et Android, propriété de Argon, qui se présente comme une plateforme regroupant les projets en AR et VR réalisés par Argon. L’accès à 3DM XR est public et l’application est téléchargeable gratuitement sur les plateformes de téléchargement Apple Store et Google Play.',
+    'cg-4.5.1-content' => '<strong>Définition</strong> 3DM XR est une application smartphone disponible sur iOS et Android, propriété de Argon, qui se présente comme une plateforme regroupant les projets en AR et VR réalisés par Argon. L’accès à 3DM XR est public et l’application est téléchargeable gratuitement sur les plateformes de téléchargement Apple Store et Google Play.',
     'cg-4.5.2-content' => 'Sauf disposition contraire, l’ouvrage développé par Argon est distribué sur la plateforme 3DM XR uniquement. Son accès est public. Argon s’engage à maintenir l’ouvrage sur 3DM XR durant une année au minimum à compter de sa livraison.',
     'cg-4.5.3-content' => 'À la demande du client, l’accès à l’ouvrage sur 3DM XR peut être rendu privé et se limiter aux détenteurs d’un mot de passe dédié.',
     'cg-4.5.4-content' => 'À la demande du client, l’ouvrage peut être distribué sur une nouvelle application dédiée. Les frais supplémentaires de licence en émanant sont à la charge du client. Argon s’engage à maintenir l’application en ligne durant une année au minimum à compter de sa livraison.',

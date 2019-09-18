@@ -1,14 +1,90 @@
 .terms-and-policies-heading {
+	padding: 80px 50px 50px 50px;
+}
+
+.terms-and-policies-heading .title {
 	text-transform: uppercase;
+	color: black;
+	font-size: 50px;
+	line-height: 55px;
+	font-weight: 400;
 }
 
-.terms-and-policies-heading h1 {
-    	color: black;
-    	font-size: 50px;
-    	line-height: 55px;
-    	font-weight: 400;
-}
-
-.terms-and-policies #navbar {
+#terms-and-policies-nav {
     top : 100px;
+}
+
+#terms-and-policies-nav .card.active {
+	background-color: transparent;
+}
+
+#terms-and-policies-nav .card {
+	background-color: transparent;
+	border-radius: 0;
+	border: 0;
+	font-size: 15px;
+	line-height: 16px;
+	font-weight: 400;
+}
+
+#terms-and-policies-nav .card-header {
+	background-color: inherit;
+	border-bottom: 1px solid transparent;
+}
+
+#terms-and-policies-nav .btn-link {
+	text-transform: uppercase;
+	text-align: left;
+	color: var(--middle-black);
+	text-decoration: unset;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+#terms-and-policies-nav .card-body {
+	color: var(--living-coral);
+}
+
+#terms-and-policies-nav .hr {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	width: 100%;
+	height: 1px;
+	background-color: var(--light-gray);
+}
+
+#terms-and-policies-nav .nav-link.active {
+	border-left: 3px solid var(--living-coral);
+}
+
+.card-body, .card-header {
+	padding: 0;
+}
+
+.terms-and-policies {
+	color: var(--middle-black);
+	font-size: 17px;
+	line-height: 21px;
+	font-weight: 300;
+}
+
+.terms-and-policies a {
+	color: var(--living-coral);
+}
+
+.terms-and-policies h2 {
+	color: var(--living-coral);
+	font-size: 28px;
+	line-height: 30px;
+	font-weight: 300;
+}
+
+.terms-and-policies h3 {
+	font-size: 22px;
+	line-height: 24px;
+	font-weight: 400;
+}
+
+.terms-and-policies strong {
+	font-weight: 400;
 }
