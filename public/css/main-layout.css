@@ -437,10 +437,9 @@ footer {
 	color: white;
 	background-color: var(--living-coral);
 	height:auto;
-	margin-top: 50px;
 	font-size: 15px;
-	line-height: 16px;
-	padding: 10px 0 5px 0;
+	line-height: 17px;
+	padding: 20px 0 5px 0;
 }
 
 footer .element-line {
