@@ -10,7 +10,7 @@
     <title>@yield('pageTitle') - Argon Studio - Augmented Reality</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('/js/jquery.paroller.js') }}" defer></script>
     <script src="{{ asset('/js/jquery.sticky.js') }}" defer></script>
     <script src="{{ asset('/js/jquery.appear.js') }}" defer></script>

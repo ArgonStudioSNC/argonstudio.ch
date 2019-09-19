@@ -7,9 +7,6 @@ $(document).ready(function(){
 
     $('#navigation').sticky({topSpacing:0});
 
-    // add scroll spy
-    $('body').scrollspy({target: ".menu-nav", offset: navHeight + 10});
-
     // collapse navbar on click
     $('.nav-link').click(function() {
         $('.navbar-collapse').collapse('hide');
@@ -39,15 +36,6 @@ $(document).ready(function(){
         //todo update paroller
         $('.paroller').paroller();
     });
-
-    window.addEventListener('scroll', function(e)
-    {
-        // back to top element
-        if ($(".navbar-custom .navbar-collapse .menu-nav .nav-item .nav-link.active")[0]){
-        } else {
-            document.getElementById("default-link").classList.add("active");
-        }
-    }, false);
 });
 
 window.addEventListener("load",

@@ -3,7 +3,7 @@
 @section('navbar')
 <nav id='navigation' class="navbar navbar-expand-sm navbar-dark navbar-custom" role ="navigation">
     <!-- Brand -->
-    <a class="navbar-brand smooth-scrolling" href="#">
+    <a class="navbar-brand" href="{{ route('website.home') }}">
         <img src="{{ asset('/media/logo/argon_banner_trimed.png') }}" alt="Argon logo"/>
     </a>
 
@@ -33,7 +33,7 @@
             @endphp
             @for ( $i = 0; $i < count($menu_pages); ++$i )
             <li class="nav-item">
-                <a class="nav-link" href="/#{{ $menu_pages[$i] }}">
+                <a class="nav-link" href="{{ route('website.home') . '#' . $menu_pages[$i] }}">
                     {{ __("navigation.".$menu_pages[$i]) }}
                 </a>
             </li>
@@ -70,7 +70,9 @@
         <div class="row d-flex align-items-end">
             <div class="col-md-6 order-md-2 text-md-right">
                 <div class="element-line">
-                    <p>Copyright &copy <?php echo date("Y"); ?> Argon Studio snc. All rights reserved<br><a>Legal mention</a> - <a>Cookies policy</a></p>
+                    <p>Copyright &copy <?php echo date("Y"); ?> Argon Studio snc. All rights reserved<br>
+                        <a href="{{ route('website.terms-of-services-development') }}">{{ __('navigation.terms-of-use-dev') }}</a> -
+                        <a href="{{ route('website.privacy-policy-apps') }}">{{ __('navigation.privacy-policy-app') }}</a></p>
                 </div>
             </div>
             <div class="col-md-6 text-md-left">
