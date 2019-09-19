@@ -71,8 +71,8 @@
             <div class="col-md-6 order-md-2 text-md-right">
                 <div class="element-line">
                     <p>Copyright &copy <?php echo date("Y"); ?> Argon Studio snc. All rights reserved<br>
-                        <a href="{{ route('website.terms-and-policies') . '#terms-of-services' }}">Terms of services</a> -
-                        <a href="{{ route('website.terms-and-policies') . '#privacy-policy' }}">Privacy policy</a></p>
+                        <a href="{{ route('website.terms-of-services-development') }}">{{ __('navigation.terms-of-use-dev') }}</a> -
+                        <a href="{{ route('website.privacy-policy-apps') }}">{{ __('navigation.privacy-policy-app') }}</a></p>
                 </div>
             </div>
             <div class="col-md-6 text-md-left">

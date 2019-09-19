@@ -69,6 +69,7 @@ h1, h2, h3, p {
 }
 
 a, a * {
+	outline: 0;
 	color: inherit;
 }
 

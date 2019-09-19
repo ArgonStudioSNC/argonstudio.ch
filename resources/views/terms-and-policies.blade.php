@@ -23,23 +23,51 @@
                             </div>
                             <div id="conditions-generales-collapse" class="collapse" data-parent="#terms-and-policies-accordion" data-text-target="conditions-generales">
                                 <div class="card-body">
-                                    <ul>
-                                        <li><a class="nav-link smooth-scrolling silent active" href="#title-conditions-generales-1">{{ __('terms-and-policies.cg-1-heading') }}</a></li>
-                                        <li><a class="nav-link smooth-scrolling silent" href="#title-conditions-generales-2">{{ __('terms-and-policies.cg-2-heading') }}</a></li>
-                                        <li><a class="nav-link smooth-scrolling silent" href="#title-conditions-generales-3">{{ __('terms-and-policies.cg-3-heading') }}</a></li>
-                                        <li><a class="nav-link smooth-scrolling silent" href="#title-conditions-generales-4">{{ __('terms-and-policies.cg-4-heading') }}</a></li>
-                                        <li><a class="nav-link smooth-scrolling silent" href="#title-conditions-generales-5">{{ __('terms-and-policies.cg-5-heading') }}</a></li>
-                                        <li><a class="nav-link smooth-scrolling silent" href="#title-conditions-generales-6">{{ __('terms-and-policies.cg-6-heading') }}</a></li>
-                                        <li><a class="nav-link smooth-scrolling silent" href="#title-conditions-generales-7">{{ __('terms-and-policies.cg-7-heading') }}</a></li>
-                                        <li><a class="nav-link smooth-scrolling silent" href="#title-conditions-generales-8">{{ __('terms-and-policies.cg-8-heading') }}</a></li>
-                                        <li><a class="nav-link smooth-scrolling silent" href="#title-conditions-generales-9">{{ __('terms-and-policies.cg-9-heading') }}</a></li>
-                                        <li><a class="nav-link smooth-scrolling silent" href="#title-conditions-generales-10">{{ __('terms-and-policies.cg-10-heading') }}</a></li>
-                                        <li><a class="nav-link smooth-scrolling silent" href="#title-conditions-generales-11">{{ __('terms-and-policies.cg-11-heading') }}</a></li>
-                                        <li><a class="nav-link smooth-scrolling silent" href="#title-conditions-generales-12">{{ __('terms-and-policies.cg-12-heading') }}</a></li>
-                                        <li><a class="nav-link smooth-scrolling silent" href="#title-conditions-generales-13">{{ __('terms-and-policies.cg-13-heading') }}</a></li>
-                                        <li><a class="nav-link smooth-scrolling silent" href="#title-conditions-generales-14">{{ __('terms-and-policies.cg-14-heading') }}</a></li>
-                                        <li><a class="nav-link smooth-scrolling silent" href="#title-conditions-generales-15">{{ __('terms-and-policies.cg-15-heading') }}</a></li>
-                                    </ul>
+                                    <nav class="nav">
+                                        <a class="nav-link smooth-scrolling silent active" href="#title-conditions-generales-1">{{ __('terms-and-policies.cg-1-heading') }}</a>
+                                    </nav>
+                                    <nav class="nav">
+                                        <a class="nav-link smooth-scrolling silent" href="#title-conditions-generales-2">{{ __('terms-and-policies.cg-2-heading') }}</a>
+                                    </nav>
+                                    <nav class="nav">
+                                        <a class="nav-link smooth-scrolling silent" href="#title-conditions-generales-3">{{ __('terms-and-policies.cg-3-heading') }}</a>
+                                    </nav>
+                                    <nav class="nav">
+                                        <a class="nav-link smooth-scrolling silent" href="#title-conditions-generales-4">{{ __('terms-and-policies.cg-4-heading') }}</a>
+                                    </nav>
+                                    <nav class="nav">
+                                        <a class="nav-link smooth-scrolling silent" href="#title-conditions-generales-5">{{ __('terms-and-policies.cg-5-heading') }}</a>
+                                    </nav>
+                                    <nav class="nav">
+                                        <a class="nav-link smooth-scrolling silent" href="#title-conditions-generales-6">{{ __('terms-and-policies.cg-6-heading') }}</a>
+                                    </nav>
+                                    <nav class="nav">
+                                        <a class="nav-link smooth-scrolling silent" href="#title-conditions-generales-7">{{ __('terms-and-policies.cg-7-heading') }}</a>
+                                    </nav>
+                                    <nav class="nav">
+                                        <a class="nav-link smooth-scrolling silent" href="#title-conditions-generales-8">{{ __('terms-and-policies.cg-8-heading') }}</a>
+                                    </nav>
+                                    <nav class="nav">
+                                        <a class="nav-link smooth-scrolling silent" href="#title-conditions-generales-9">{{ __('terms-and-policies.cg-9-heading') }}</a>
+                                    </nav>
+                                    <nav class="nav">
+                                        <a class="nav-link smooth-scrolling silent" href="#title-conditions-generales-10">{{ __('terms-and-policies.cg-10-heading') }}</a>
+                                    </nav>
+                                    <nav class="nav">
+                                        <a class="nav-link smooth-scrolling silent" href="#title-conditions-generales-11">{{ __('terms-and-policies.cg-11-heading') }}</a>
+                                    </nav>
+                                    <nav class="nav">
+                                        <a class="nav-link smooth-scrolling silent" href="#title-conditions-generales-12">{{ __('terms-and-policies.cg-12-heading') }}</a>
+                                    </nav>
+                                    <nav class="nav">
+                                        <a class="nav-link smooth-scrolling silent" href="#title-conditions-generales-13">{{ __('terms-and-policies.cg-13-heading') }}</a>
+                                    </nav>
+                                    <nav class="nav">
+                                        <a class="nav-link smooth-scrolling silent" href="#title-conditions-generales-14">{{ __('terms-and-policies.cg-14-heading') }}</a>
+                                    </nav>
+                                    <nav class="nav">
+                                        <a class="nav-link smooth-scrolling silent" href="#title-conditions-generales-15">{{ __('terms-and-policies.cg-15-heading') }}</a>
+                                    </nav>
                                 </div>
                             </div>
                         </div>
@@ -47,14 +75,26 @@
                         <div id="politique-de-confidentialite" class="card">
                             <div id="politique-de-confidentialite-heading" class="card-header">
                                 <button id="politique-de-confidentialite-btn" class="btn btn-link collapsed" aria-controls="politique-de-confidentialite-collapse" aria-expanded="false" data-target="#politique-de-confidentialite-collapse" data-toggle="collapse" type="button">
-                                    {{ __('terms-and-policies.confidentialité-heading') }}
+                                    {{ __('terms-and-policies.confidentialite-apps-heading') }}
                                 </button>
                             </div>
                             <div id="politique-de-confidentialite-collapse" class="collapse" data-parent="#terms-and-policies-accordion" data-text-target="politique-de-confidentialite">
                                 <div class="card-body">
-                                    <ul>
-                                        <li><a class="nav-link smooth-scrolling silent" href="#title-politique-de-confidentialite-1">{{ __('terms-and-policies.confidentialité-1-heading') }}</a></li>
-                                    </ul>
+                                    <nav class="nav">
+                                        <a class="nav-link smooth-scrolling silent" href="#title-politique-de-confidentialite-1">{{ __('terms-and-policies.confidentialite-apps-1-heading') }}</a>
+                                    </nav>
+                                    <nav class="nav">
+                                        <a class="nav-link smooth-scrolling silent" href="#title-politique-de-confidentialite-2">{{ __('terms-and-policies.confidentialite-apps-2-heading') }}</a>
+                                    </nav>
+                                    <nav class="nav">
+                                        <a class="nav-link smooth-scrolling silent" href="#title-politique-de-confidentialite-3">{{ __('terms-and-policies.confidentialite-apps-3-heading') }}</a>
+                                    </nav>
+                                    <nav class="nav">
+                                        <a class="nav-link smooth-scrolling silent" href="#title-politique-de-confidentialite-4">{{ __('terms-and-policies.confidentialite-apps-4-heading') }}</a>
+                                    </nav>
+                                    <nav class="nav">
+                                        <a class="nav-link smooth-scrolling silent" href="#title-politique-de-confidentialite-5">{{ __('terms-and-policies.confidentialite-apps-5-heading') }}</a>
+                                    </nav>
                                 </div>
                             </div>
                         </div>
@@ -124,9 +164,28 @@
                     <p>14.2. {{ __('terms-and-policies.cg-14.2-content') }}</p>
                     <h2 id="title-conditions-generales-15">15. {{ __('terms-and-policies.cg-15-heading') }}</h2>
                     <p>{{ __('terms-and-policies.cg-15-content') }}</p>
+                    <div class="download-link">
+                        <a href="{{ Storage::url('uploads/20190305-CG-FR-Version-03-2019.pdf') }}"><i class="fas fa-file-pdf"></i> {{ __('terms-and-policies.cd-pdf-download') }}</a>
+                    </div>
                 </div>
                 <div id="text-politique-de-confidentialite">
-                    <h2 id="title-politique-de-confidentialite-0">{{ __('terms-and-policies.confidentialité-1-heading') }}</h2>
+                    <h2 id="title-politique-de-confidentialite-1">{{ __('terms-and-policies.confidentialite-apps-1-heading') }}</h2>
+                    <p>1.1. {{ __('terms-and-policies.confidentialite-apps-1.1-content') }}</p>
+                    <p>1.2. {!! __('terms-and-policies.confidentialite-apps-1.2-content') !!}</p>
+                    <h2 id="title-politique-de-confidentialite-2">{{ __('terms-and-policies.confidentialite-apps-2-heading') }}</h2>
+                    <p>{{ __('terms-and-policies.confidentialite-apps-2-content') }}</p>
+                    <h2 id="title-politique-de-confidentialite-3">{{ __('terms-and-policies.confidentialite-apps-3-heading') }}</h2>
+                    <p>{{ __('terms-and-policies.confidentialite-apps-3-content') }}</p>
+                    <h2 id="title-politique-de-confidentialite-4">{{ __('terms-and-policies.confidentialite-apps-4-heading') }}</h2>
+                    <p>{{ __('terms-and-policies.confidentialite-apps-4-content') }}</p>
+                    <h2 id="title-politique-de-confidentialite-5">{{ __('terms-and-policies.confidentialite-apps-5-heading') }}</h2>
+                    <p><strong>{{ __('terms-and-policies.confidentialite-apps-5.1-heading') }}</strong> {{ __('terms-and-policies.confidentialite-apps-5.1-content') }}</p>
+                    <p><strong>{{ __('terms-and-policies.confidentialite-apps-5.2-heading') }}</strong> {{ __('terms-and-policies.confidentialite-apps-5.2-content') }}</p>
+                    <p><strong>{{ __('terms-and-policies.confidentialite-apps-5.3-heading') }}</strong> {{ __('terms-and-policies.confidentialite-apps-5.3-content') }}</p>
+                    <p><strong>{{ __('terms-and-policies.confidentialite-apps-5.4-heading') }}</strong> {{ __('terms-and-policies.confidentialite-apps-5.4-content') }}</p>
+                    <p><strong>{{ __('terms-and-policies.confidentialite-apps-5.5-heading') }}</strong> {{ __('terms-and-policies.confidentialite-apps-5.5-content') }}</p>
+                    <h2 id="title-politique-de-confidentialite-6">{{ __('terms-and-policies.confidentialite-apps-6-heading') }}</h2>
+                    <p>{{ __('terms-and-policies.confidentialite-apps-6-content') }}</p>
                 </div>
             </div>
         </div>
@@ -157,16 +216,32 @@ $(window).on('load', function() {
             c.style.display = '';
             d.style.display = 'none';
             $('html,body').scrollTop(0);
+            if(window.location.pathname != '/terms-of-services-development') {
+                window.history.pushState(null, "terms-of-services-development", '/terms-of-services-development');
+            }
         }
-    });
+    }, false);
     b.addEventListener('click', function() {
         if ($( this ).hasClass('collapsed')){
             c.style.display = 'none';
             d.style.display = '';
             $('html,body').scrollTop(0);
+            if(window.location.pathname != '/privacy-policy-apps') {
+                window.history.pushState(null, "privacy-policy-apps", '/privacy-policy-apps');
+            }
         }
-    });
-    window.location.hash == '#privacy-policy' ? document.getElementById('politique-de-confidentialite-btn').click() : document.getElementById('conditions-generales-btn').click();
+    }, false);
+
+    switch(@json($pathname)) {
+        case 'terms-of-services-development':
+        a.click()
+        break;
+        case 'privacy-policy-apps':
+        b.click()
+        break;
+        default:
+        a.click();
+    }
 });
 </script>
 @endsection
