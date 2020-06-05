@@ -15,3 +15,5 @@ Route::get('/', 'WebsiteController@home')->name('website.home');
 Route::get('/terms-of-services-development', 'WebsiteController@termsofservicesdevelopment')->name('website.terms-of-services-development');
 Route::get('/privacy-policy-apps', 'WebsiteController@privacypolicyapps')->name('website.privacy-policy-apps');
 Route::get('/3dm-xr', 'WebsiteController@gettheapp')->name('website.gettheapp');
+
+Route::view('/gerama', 'gerama');
