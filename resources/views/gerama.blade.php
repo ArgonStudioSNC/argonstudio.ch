@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Argon Studio - Gerama 360&deg; galerie</title>
+    <title>Argon Studio - Gerama 360&deg;</title>
     <meta name="description" content="360&deg; Image Gallery - A-Frame">
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-event-set-component@5/dist/aframe-event-set-component.min.js"></script>
@@ -20,30 +20,46 @@
         event-set__click="_target: #image-360; _delay: 300; material.src: ${src}"
         proxy-event="event: click; to: #image-360; as: fade"></a-entity>
     </script>
+    
 </head>
 <body>
     <a-scene vr-mode-ui="false">
         <a-assets>
-            <img id="city" crossorigin="anonymous" src="storage/gerama/pano.jpg">
-            <!--<img id="city-thumb" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-city.jpg">
-            <img id="cubes-thumb" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-cubes.jpg">
-            <img id="sechelt-thumb" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-sechelt.jpg">
-            <img id="cubes" crossorigin="anonymous" src="/gerama/pano.jpg">
-            <img id="sechelt" crossorigin="anonymous" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">-->
+            <img id="25P" crossorigin="anonymous" src="storage/gerama/pano25p.jpg">
+            <img id="35P" crossorigin="anonymous" src="storage/gerama/pano35p.jpg">
+            <img id="45P" crossorigin="anonymous" src="storage/gerama/pano45p.jpg">
+            <img id="55P" crossorigin="anonymous" src="storage/gerama/pano55p.jpg">
+            <img id="CHA" crossorigin="anonymous" src="storage/gerama/panocha.jpg">
+            <img id="ENF" crossorigin="anonymous" src="storage/gerama/panoenf.jpg">
+            <img id="BAI" crossorigin="anonymous" src="storage/gerama/panobai.jpg">
+            <img id="DOU" crossorigin="anonymous" src="storage/gerama/panodou.jpg">
+            <img id="25P-thumb" crossorigin="anonymous" src="storage/gerama/thumb_25p.jpg">
+            <img id="35P-thumb" crossorigin="anonymous" src="storage/gerama/thumb_35p.jpg">
+            <img id="45P-thumb" crossorigin="anonymous" src="storage/gerama/thumb_45p.jpg">
+            <img id="55P-thumb" crossorigin="anonymous" src="storage/gerama/thumb_55p.jpg">
+            <img id="CHA-thumb" crossorigin="anonymous" src="storage/gerama/thumb_cha.jpg">
+            <img id="ENF-thumb" crossorigin="anonymous" src="storage/gerama/thumb_enf.jpg">
+            <img id="BAI-thumb" crossorigin="anonymous" src="storage/gerama/thumb_bai.jpg">
+            <img id="DOU-thumb" crossorigin="anonymous" src="storage/gerama/thumb_dou.jpg">
 
         </a-assets>
 
         <!-- 360-degree image. -->
-        <a-sky id="image-360" radius="10" src="#city"
+        <a-sky id="image-360" radius="10" src="#25P"
         animation__fade="property: components.material.material.color; type: color; from: #FFF; to: #000; dur: 300; startEvents: fade"
         animation__fadeback="property: components.material.material.color; type: color; from: #000; to: #FFF; dur: 300; startEvents: animationcomplete__fade"></a-sky>
 
         <!-- Image links. -->
-        <!--<a-entity id="links" layout="type: line; margin: 1.5" position="0 -1 -4">
-        <a-entity template="src: #link" data-src="#cubes" data-thumb="#cubes-thumb"></a-entity>
-        <a-entity template="src: #link" data-src="#city" data-thumb="#city-thumb"></a-entity>
-        <a-entity template="src: #link" data-src="#sechelt" data-thumb="#sechelt-thumb"></a-entity>
-    </a-entity>-->
+        <a-entity id="links" layout="type: line; margin: 1.5" position="-5 -3 -5 -7">
+        <a-entity template="src: #link" data-src="#25P" data-thumb="#25P-thumb"></a-entity>
+        <a-entity template="src: #link" data-src="#35P" data-thumb="#35P-thumb"></a-entity>
+        <a-entity template="src: #link" data-src="#45P" data-thumb="#45P-thumb"></a-entity>
+        <a-entity template="src: #link" data-src="#55P" data-thumb="#55P-thumb"></a-entity>
+        <a-entity template="src: #link" data-src="#CHA" data-thumb="#CHA-thumb"></a-entity>
+        <a-entity template="src: #link" data-src="#ENF" data-thumb="#ENF-thumb"></a-entity>
+        <a-entity template="src: #link" data-src="#BAI" data-thumb="#BAI-thumb"></a-entity>
+        <a-entity template="src: #link" data-src="#DOU" data-thumb="#DOU-thumb"></a-entity>
+    </a-entity>
 
     <!-- Camera + cursor. -->
     <a-entity camera look-controls>
