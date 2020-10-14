@@ -18,13 +18,23 @@ class WebsiteController extends Controller
     }
 
     /**
-    * Show the gettheapp page.
+    * Show the page to get 3DM XR app.
     *
     * @return \Illuminate\Contracts\Support\Renderable
     */
-    public function gettheapp()
+    public function get3dmapp()
     {
-        return view('get-the-app');
+        return view('get-3dm-app');
+    }
+
+    /**
+    * Show the gettheapp page. (argon xr)
+    *
+    * @return \Illuminate\Contracts\Support\Renderable
+    */
+    public function app()
+    {
+        return view('app');
     }
 
     /**
