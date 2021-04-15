@@ -18,3 +18,7 @@ Route::get('/3dm-xr', 'WebsiteController@get3dmapp')->name('website.get3dmapp');
 Route::get('/app', 'WebsiteController@app')->name('website.app');
 
 Route::view('/gerama', 'gerama');
+
+Route::get('/mailable/{id}', function ($id) {
+    return new App\Mail\Promotion($id);
+});
