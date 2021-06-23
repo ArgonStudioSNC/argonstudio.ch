@@ -34,7 +34,7 @@ class Promotion extends Mailable
     public function build()
     {
         if (view()->exists($this->viewPath)) {
-            return $this->view($this->viewPath);
+            return $this->subject('🏥 Utilisez la réalité augmentée pour le projet d\'hôpital Bienne/Brügg')->view($this->viewPath);
         }
         abort(404);
     }
