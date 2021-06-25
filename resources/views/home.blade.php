@@ -177,7 +177,7 @@ window.addEventListener('scroll', function(e)
                 <span class="line"></span><span>Plusieurs projets</span><span class="line"></span>
                 <h1 class='slider' style="opacity: 0;transform: translateY(30%);-webkit-transform: translateY(30%);">Une plateforme</h1>
             </div>
-            <p class="lead">La meilleure façon de découvrir une technologie reste de l’essayer par soi-même. La plupart de nos projets en lien avec l’architecture sont disponibles sur notre application mobile 3DM XR.</p>
+            <p class="lead">La meilleure façon de découvrir une technologie reste de l’essayer par soi-même. La plupart de nos projets en lien avec l’architecture sont disponibles sur notre application mobile Argon XR.</p>
         </div>
         <div class="container section-content">
             <div class="row">
@@ -190,23 +190,23 @@ window.addEventListener('scroll', function(e)
                     <div class="element-line">
                         <div class="row text-right">
                             <div class="col-9">
-                                <h1>3DM XR - Mixed Reality</h1>
+                                <h1>Argon XR - Mixed Reality</h1>
                                 <p>Disponible gratuitement sur smartphone et tablette</p>
                             </div>
                             <div class="col-3">
-                                <img class="img-fluid 3dm-logo" alt="3DM XR logo" src="{{ asset('/media/logo/3DMXR_IconRond192.png') }}" style="border-radius: 50%;">
+                                <img class="img-fluid 3dm-logo" alt="3DM XR logo" src="{{ asset('/media/logo/argon_xr_icon_round.png') }}" style="border-radius: 50%;">
                             </div>
                         </div>
                     </div>
                     <div class="element-line">
                         <div class="row">
                             <div class="col-lg-5 download-badge">
-                                <a href='https://play.google.com/store/apps/details?id=com.ThirdDimensionMedia.MixedReality&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1' target='_blank'>
+                                <a href='https://play.google.com/store/apps/details?id=com.argonstudio.xr' target='_blank'>
                                     <img class="img-fluid" alt='Disponible sur Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/fr_badge_web_generic.png'>
                                 </a>
                             </div>
                             <div class="col-lg-5 download-badge">
-                                <a href='https://itunes.apple.com/us/app/3dm-xr-mixed-reality/id1437366723?l=fr&ls=1&mt=8' target='_blank'>
+                                <a href='https://apps.apple.com/us/app/argon-xr-mixed-reality/id1530730395' target='_blank'>
                                     <img class="img-fluid" alt="Télécharger dans l'App Store" src="{{ asset('/media/logo/Download_on_the_App_Store_Badge_FR.png') }}">
                                 </a>
                             </div>

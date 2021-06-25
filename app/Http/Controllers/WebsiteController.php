@@ -38,6 +38,16 @@ class WebsiteController extends Controller
     }
 
     /**
+    * Show the targets download page.
+    *
+    * @return \Illuminate\Contracts\Support\Renderable
+    */
+    public function targets()
+    {
+        return view('targets');
+    }
+
+    /**
     * Show the terms and policies page at signet terms-of-services-development
     *
     * @return \Illuminate\Contracts\Support\Renderable
