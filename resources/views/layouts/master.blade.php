@@ -62,7 +62,7 @@
                     <p class="muted-text">
                         <a href='mailto:contact@argonstudio.ch' target='_top'><i class="fas fa-envelope"></i> contact@argonstudio.ch</a>
                         <br>
-                        <a href='tel:+41323232503'><i class="fas fa-phone"></i> +41 (0)32 323 25 03</a>
+                        <a href='tel:+41795788641'><i class="fas fa-phone"></i> +41 (0)79 578 86 41</a>
                     </p>
                 </div>
             </div>

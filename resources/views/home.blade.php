@@ -297,11 +297,11 @@ window.addEventListener('scroll', function(e)
                 <div class="col-md-6 text-md-left">
                     <div class="element-line">
                         <h1>Bureau</h1>
-                        <p>Argon Studio<br>
-                            Rue du Contrôle 28<br>
-                            2503 Biel/Bienne<br>
+                        <p>
+                            Argon Studio - Loïc Charrière<br>
+                            Rathausgässli 4<br>
+                            2502 Biel/Bienne<br>
                             <a href='mailto:contact@argonstudio.ch' target='_top'>contact@argonstudio.ch</a><br>
-                            <a href='tel:+41323232503'>+41 (0)32 323 25 03</a>
                         </p>
                     </div>
                 </div>

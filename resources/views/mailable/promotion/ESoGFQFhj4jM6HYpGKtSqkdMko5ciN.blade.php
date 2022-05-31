@@ -543,7 +543,7 @@
                                     </div>
                                     <div style="color:#898989;font-family:'Overpass', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight:300;line-height:150%;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;">
                                         <div style="color: #898989;font-family:'Overpass', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight:300; font-size: 12px; line-height: 18px;">
-                                            <p style="font-size: 14px; line-height: 21px; margin: 0;">Argon Studio<br/>Rue du Contrôle 28<br/>2503 Biel/Bienne<br/><a href="mailto:contact@argonstudio.ch" style="text-decoration: none; color: #898989;" title="contact@argonstudio.ch">contact@argonstudio.ch</a><br/><a href="tel:0041323232503" style="text-decoration: none; color: #898989;" title="tel:0041323232503">+41 (0)32 323 25 03</a></p>
+                                            <p style="font-size: 14px; line-height: 21px; margin: 0;">Argon Studio<br/>Rathausgässli 4<br/>2502 Biel/Bienne<br/><a href="mailto:contact@argonstudio.ch" style="text-decoration: none; color: #898989;" title="contact@argonstudio.ch">contact@argonstudio.ch</a><br/><a href="tel:+41795788641" style="text-decoration: none; color: #898989;" title="tel:+41795788641">+41 (0)79 578 86 41</a></p>
                                         </div>
                                     </div>
                                 </div>
